@@ -27,14 +27,19 @@ public class AddProductToCartStepsDefinition {
 
     @Given("the user is in the homepage and enter product in the search bar")
     public void theUserIsInTheHomepageAndEnterProductInTheSearchBar() {
-        theActorCalled("User").wasAbleTo(
-                Open.url("https://www.falabella.com.co/falabella-co")
+        try {
+            theActorCalled("User").wasAbleTo(
+                    Open.url("https://www.falabella.com.co/falabella-co")
 
-        );
+            );
+        } catch (Exception e ){
+            throw new AssertionError("Failed to open the homepage and search for the product", e);
+        }
     }
 
     @When("the user select a random product from the results list and add units of the same product")
     public void theUserSelectARandomProductFromTheResultsListAndAddUnitsOfTheSameProduct() {
+
 
         theActorInTheSpotlight().attemptsTo(
                 HomeTask.Home(),
@@ -64,4 +69,4 @@ public class AddProductToCartStepsDefinition {
         );
 
     }
-}
+ }

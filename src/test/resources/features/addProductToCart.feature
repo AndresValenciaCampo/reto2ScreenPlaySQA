@@ -4,6 +4,7 @@ Feature: Add Product to Shopping Cart
   So that I can make a successful purchase
 
 
+  @AddProductSuccess
   Scenario: Add product to cart success
     Given the user is in the homepage and enter product in the search bar
     When the user select a random product from the results list and add units of the same product

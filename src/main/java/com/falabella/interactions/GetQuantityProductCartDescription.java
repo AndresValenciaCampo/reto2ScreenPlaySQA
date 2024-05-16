@@ -5,11 +5,13 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Performable;
 
 import static com.falabella.ui.CartProductUI.TXT_QUANTITY_PRODUCT;
+
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class GetQuantityProductCartDescription implements Interaction {
 
 private static String quantityCart;
+
     @Override
     public <T extends Actor> void performAs(T actor) {
 

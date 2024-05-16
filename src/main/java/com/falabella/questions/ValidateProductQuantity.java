@@ -12,8 +12,12 @@ public class ValidateProductQuantity implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
 
         String quantityExel = GetQuantityProductExel.data1();
+        System.out.println("quantity en validateProduct " + quantityExel);
+
 
         String quantityCart = GetQuantityProductCartDescription.data2();
+        System.out.println("quantityCart en validateProduct " + quantityCart);
+
 
         return quantityExel.equals(quantityCart);
     }
